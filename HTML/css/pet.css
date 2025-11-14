@@ -1,0 +1,467 @@
+/* ===== PET FORM STYLES ===== */
+.pet-main {
+    padding: 20px;
+    max-width: 800px;
+    margin: 0 auto;
+    background-color: #fffa93;
+    min-height: 100vh;
+}
+
+.back-container {
+    margin-bottom: 20px;
+}
+
+.back-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    color: #0077b6;
+    text-decoration: none;
+    font-weight: bold;
+    padding: 10px 20px;
+    border: 2px solid #0077b6;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+    background: white;
+}
+
+.back-btn:hover {
+    background-color: #0077b6;
+    color: white;
+    transform: translateY(-2px);
+}
+
+.pet-container {
+    background: white;
+    border-radius: 15px;
+    padding: 30px;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+    border: 2px solid #a7e7ff;
+}
+
+.pet-container h1 {
+    color: #0077b6;
+    text-align: center;
+    margin-bottom: 30px;
+    font-size: 2rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+/* Pet Picture Container */
+.pet-pic-container {
+    text-align: center;
+    margin-bottom: 30px;
+    padding: 25px;
+    background: #f8fdff;
+    border-radius: 12px;
+    border: 2px dashed #a7e7ff;
+}
+
+.pet-profile-pic {
+    width: 200px;
+    height: 200px;
+    border-radius: 12px;
+    object-fit: cover;
+    border: 3px solid #0077b6;
+    margin-bottom: 15px;
+    box-shadow: 0 4px 15px rgba(0, 119, 182, 0.2);
+}
+
+.upload-btn-label {
+    display: inline-block;
+    background: linear-gradient(135deg, #0077b6, #0056b3);
+    color: white;
+    padding: 12px 25px;
+    border-radius: 8px;
+    cursor: pointer;
+    margin: 10px 0;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.upload-btn-label:hover {
+    background: linear-gradient(135deg, #0056b3, #004494);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0, 119, 182, 0.3);
+}
+
+.file-help {
+    font-size: 0.8rem;
+    color: #666;
+    margin-top: 8px;
+}
+
+.remove-pic-option {
+    margin-top: 15px;
+}
+
+.remove-pic-option label {
+    font-size: 0.9rem;
+    color: #666;
+    cursor: pointer;
+}
+
+input[type="file"] {
+    display: none;
+}
+
+/* Form Styles */
+.pet-form {
+    margin-top: 20px;
+}
+
+.form-group {
+    margin-bottom: 25px;
+    padding: 20px;
+    background: #f8fdff;
+    border-radius: 10px;
+    border: 2px solid #e0f4ff;
+    box-shadow: 0 2px 8px rgba(0, 119, 182, 0.1);
+    transition: all 0.3s ease;
+}
+
+.form-group:hover {
+    border-color: #a7e7ff;
+    box-shadow: 0 4px 12px rgba(0, 119, 182, 0.15);
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 10px;
+    font-weight: bold;
+    color: #0077b6;
+    font-size: 1rem;
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+    width: 100%;
+    padding: 12px 15px;
+    border: 2px solid #a7e7ff;
+    border-radius: 8px;
+    font-size: 16px;
+    font-family: "Poppins", Arial, sans-serif;
+    transition: all 0.3s ease;
+    background: white;
+}
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+    border-color: #0077b6;
+    outline: none;
+    background: white;
+    box-shadow: 0 0 0 3px rgba(0, 119, 182, 0.1);
+}
+
+.form-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+}
+
+.form-row .form-group {
+    margin-bottom: 0;
+}
+
+/* Medical History Header */
+.medical-history-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.medical-record-btn {
+    background: linear-gradient(135deg, #28a745, #20c997);
+    color: white;
+    border: none;
+    padding: 8px 16px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    font-size: 0.9rem;
+}
+
+.medical-record-btn:hover {
+    background: linear-gradient(135deg, #218838, #1e9e8a);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(40, 167, 69, 0.3);
+}
+
+/* Form Actions */
+.form-actions {
+    text-align: center;
+    margin-top: 30px;
+    padding-top: 25px;
+    border-top: 2px solid #a7e7ff;
+}
+
+.submit-btn {
+    background: linear-gradient(135deg, #0077b6, #0056b3);
+    color: white;
+    border: none;
+    border-radius: 50px;
+    padding: 15px 40px;
+    font-size: 1.1rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    box-shadow: 0 6px 20px rgba(0, 119, 182, 0.3);
+}
+
+.submit-btn:hover {
+    background: linear-gradient(135deg, #0056b3, #004494);
+    transform: translateY(-3px);
+    box-shadow: 0 8px 25px rgba(0, 119, 182, 0.4);
+}
+
+/* Modal Styles */
+.modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.6);
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+    backdrop-filter: blur(5px);
+}
+
+.modal-content {
+    background: white;
+    padding: 30px;
+    border-radius: 15px;
+    width: 90%;
+    max-width: 500px;
+    max-height: 80vh;
+    overflow-y: auto;
+    position: relative;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+    border: 3px solid #a7e7ff;
+    animation: modalSlideIn 0.3s ease-out;
+}
+
+@keyframes modalSlideIn {
+    from {
+        opacity: 0;
+        transform: translateY(-50px) scale(0.9);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+    }
+}
+
+.close-modal {
+    position: absolute;
+    top: 15px;
+    right: 20px;
+    font-size: 28px;
+    cursor: pointer;
+    color: #666;
+    transition: color 0.3s ease;
+    background: none;
+    border: none;
+    width: 30px;
+    height: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.close-modal:hover {
+    color: #333;
+    background: #f0f0f0;
+    border-radius: 50%;
+}
+
+/* Popup Sections */
+.popup-section {
+    margin-bottom: 25px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid #e9ecef;
+}
+
+.popup-section:last-child {
+    border-bottom: none;
+    margin-bottom: 0;
+    padding-bottom: 0;
+}
+
+.popup-section h4 {
+    color: #0077b6;
+    margin-bottom: 15px;
+    font-size: 1.1rem;
+}
+
+.popup-form-group {
+    margin-bottom: 15px;
+}
+
+.popup-form-group label {
+    display: block;
+    margin-bottom: 8px;
+    color: #0077b6;
+    font-weight: 600;
+}
+
+.popup-form-group input {
+    width: 100%;
+    padding: 10px 12px;
+    border: 2px solid #a7e7ff;
+    border-radius: 6px;
+    font-size: 14px;
+    transition: all 0.3s ease;
+}
+
+.popup-form-group input:focus {
+    border-color: #0077b6;
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(0, 119, 182, 0.1);
+}
+
+.popup-add-btn {
+    background: linear-gradient(135deg, #0077b6, #0056b3);
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    margin-bottom: 15px;
+}
+
+.popup-add-btn:hover {
+    background: linear-gradient(135deg, #0056b3, #004494);
+    transform: translateY(-2px);
+}
+
+.list-display-box {
+    margin-top: 10px;
+    padding: 15px;
+    background: #f8f9fa;
+    border-radius: 8px;
+    border: 1px solid #e9ecef;
+    min-height: 60px;
+    max-height: 150px;
+    overflow-y: auto;
+}
+
+.list-display-item {
+    background: white;
+    padding: 8px 12px;
+    margin: 5px 0;
+    border-radius: 4px;
+    border-left: 4px solid #0077b6;
+    font-size: 0.9rem;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+}
+
+.popup-back-link {
+    display: inline-block;
+    margin-top: 15px;
+    color: #0077b6;
+    text-decoration: none;
+    font-weight: 600;
+    transition: color 0.3s ease;
+}
+
+.popup-back-link:hover {
+    color: #0056b3;
+    text-decoration: underline;
+}
+
+/* Success and Error Messages */
+.success-msg {
+    background: linear-gradient(135deg, #d4edda, #c3e6cb);
+    color: #155724;
+    padding: 15px 20px;
+    border-radius: 8px;
+    margin-bottom: 25px;
+    border: 2px solid #c3e6cb;
+    font-weight: 600;
+    text-align: center;
+}
+
+.error-msg {
+    background: linear-gradient(135deg, #f8d7da, #f5c6cb);
+    color: #721c24;
+    padding: 15px 20px;
+    border-radius: 8px;
+    margin-bottom: 25px;
+    border: 2px solid #f5c6cb;
+    font-weight: 600;
+    text-align: center;
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 768px) {
+    .pet-main {
+        padding: 15px;
+    }
+    
+    .pet-container {
+        padding: 20px;
+    }
+    
+    .form-row {
+        grid-template-columns: 1fr;
+        gap: 15px;
+    }
+    
+    .form-group {
+        padding: 15px;
+    }
+    
+    .medical-history-header {
+        flex-direction: column;
+        gap: 10px;
+        align-items: flex-start;
+    }
+    
+    .medical-record-btn {
+        align-self: flex-start;
+    }
+    
+    .modal-content {
+        padding: 20px;
+        margin: 20px;
+        width: calc(100% - 40px);
+    }
+    
+    .submit-btn {
+        padding: 12px 30px;
+        font-size: 1rem;
+        width: 100%;
+    }
+}
+
+@media (max-width: 480px) {
+    .pet-profile-pic {
+        width: 150px;
+        height: 150px;
+    }
+    
+    .upload-btn-label {
+        padding: 10px 20px;
+        font-size: 0.9rem;
+    }
+    
+    .modal-content {
+        padding: 15px;
+        margin: 10px;
+        width: calc(100% - 20px);
+    }
+}

@@ -1,0 +1,284 @@
+/* ===== MODAL STYLES ===== */
+.modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.6);
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+    backdrop-filter: blur(5px);
+}
+
+.modal-content {
+    background: white;
+    padding: 30px;
+    border-radius: 20px;
+    width: 90%;
+    max-width: 500px;
+    position: relative;
+    box-shadow: 0 20px 40px rgba(0,0,0,0.3);
+    border: 3px solid #a7e7ff;
+    animation: modalSlideIn 0.3s ease-out;
+}
+
+@keyframes modalSlideIn {
+    from {
+        opacity: 0;
+        transform: translateY(-50px) scale(0.9);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+    }
+}
+
+.close-modal {
+    position: absolute;
+    top: 15px;
+    right: 20px;
+    font-size: 28px;
+    cursor: pointer;
+    color: #666;
+    transition: color 0.8s ease;
+    background: none;
+    border: none;
+    width: 30px;
+    height: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.close-modal:hover {
+    color: #333;
+    background: #f0f0f0;
+    border-radius: 50%;
+}
+
+/* Pet Selection Styles */
+.pet-option {
+    display: flex;
+    align-items: center;
+    padding: 15px;
+    border: 2px solid #e0e0e0;
+    border-radius: 12px;
+    margin: 10px 0;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    background: #f8fdff;
+}
+
+.pet-option:hover {
+    border-color: #0077b6;
+    background: #e7f3ff;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 15px rgba(0, 119, 182, 0.1);
+}
+
+.pet-option.selected {
+    border-color: #0077b6;
+    background: #e7f3ff;
+    box-shadow: 0 4px 15px rgba(0, 119, 182, 0.2);
+}
+
+.pet-radio {
+    margin-right: 15px;
+    transform: scale(1.2);
+    accent-color: #0077b6;
+}
+
+.pet-info h4 {
+    margin: 0 0 5px 0;
+    color: #0077b6;
+    font-size: 1.1rem;
+    font-weight: 600;
+}
+
+.pet-info p {
+    margin: 0;
+    color: #666;
+    font-size: 0.9rem;
+}
+
+.no-pets-message {
+    text-align: center;
+    padding: 30px 20px;
+    color: #666;
+    background: #f8f9fa;
+    border-radius: 12px;
+    margin: 20px 0;
+}
+
+.no-pets-message p {
+    margin-bottom: 20px;
+    font-size: 1rem;
+}
+
+.add-pet-btn {
+    background: linear-gradient(135deg, #28a745, #6fcf97);
+    color: white;
+    padding: 12px 25px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: bold;
+    transition: all 0.3s ease;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.add-pet-btn:hover {
+    background: linear-gradient(135deg, #218838, #5cb85c);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 15px rgba(40, 167, 69, 0.3);
+}
+
+.join-confirm-btn {
+    background: linear-gradient(135deg, #0077b6, #0056b3);
+    color: white;
+    padding: 15px 25px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: bold;
+    margin-top: 20px;
+    width: 100%;
+    transition: all 0.3s ease;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.join-confirm-btn:disabled {
+    background: #6c757d;
+    cursor: not-allowed;
+    transform: none;
+    box-shadow: none;
+}
+
+.join-confirm-btn:hover:not(:disabled) {
+    background: linear-gradient(135deg, #0056b3, #004494);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 15px rgba(0, 119, 182, 0.3);
+}
+
+/* Success Modal Styles */
+.success-modal {
+    text-align: center;
+    padding: 40px 30px;
+}
+
+.success-icon {
+    font-size: 60px;
+    margin-bottom: 20px;
+    color: #28a745;
+    animation: successBounce 0.6s ease;
+}
+
+@keyframes successBounce {
+    0%, 20%, 50%, 80%, 100% {
+        transform: translateY(0);
+    }
+    40% {
+        transform: translateY(-10px);
+    }
+    60% {
+        transform: translateY(-5px);
+    }
+}
+
+.success-modal h3 {
+    color: #28a745;
+    margin-bottom: 15px;
+    font-size: 1.5rem;
+    font-weight: 700;
+}
+
+.success-modal p {
+    color: #666;
+    margin-bottom: 25px;
+    font-size: 1.1rem;
+}
+
+/* Loading State */
+.loading {
+    text-align: center;
+    padding: 30px;
+    color: #666;
+    font-style: italic;
+}
+
+.loading::after {
+    content: '...';
+    animation: dots 1.5s steps(4, end) infinite;
+}
+
+@keyframes dots {
+    0%, 20% { content: '.'; }
+    40% { content: '..'; }
+    60%, 100% { content: '...'; }
+}
+
+/* Responsive Design for Modals */
+@media (max-width: 768px) {
+    .modal-content {
+        padding: 20px;
+        margin: 20px;
+        width: calc(100% - 40px);
+    }
+    
+    .pet-option {
+        padding: 12px;
+    }
+    
+    .pet-info h4 {
+        font-size: 1rem;
+    }
+    
+    .pet-info p {
+        font-size: 0.85rem;
+    }
+    
+    .success-modal {
+        padding: 30px 20px;
+    }
+}
+
+.pet-option.already-attending {
+    opacity: 0.6;
+    background: #f8f9fa;
+    cursor: not-allowed;
+}
+
+.pet-option.already-attending:hover {
+    border-color: #e0e0e0;
+    background: #f8f9fa;
+    transform: none;
+}
+
+.already-attending-note {
+    color: #666;
+    font-size: 0.8rem;
+    font-style: italic;
+    margin: 5px 0 0 0;
+}
+
+.all-pets-attending {
+    text-align: center;
+    padding: 20px;
+    background: #e7f5ff;
+    border-radius: 10px;
+    margin-top: 15px;
+    border: 1px solid #a7e7ff;
+}
+
+.all-pets-attending p {
+    margin: 0;
+    color: #0077b6;
+    font-weight: 600;
+}
